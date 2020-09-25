@@ -5,9 +5,11 @@
 //! * [`WaitGroup`], for synchronizing the beginning or end of some computation.
 
 mod parker;
+#[cfg(feature = "lazy_static")]
 mod sharded_lock;
 mod wait_group;
 
 pub use self::parker::{Parker, Unparker};
+#[cfg(feature = "lazy_static")]
 pub use self::sharded_lock::{ShardedLock, ShardedLockReadGuard, ShardedLockWriteGuard};
 pub use self::wait_group::WaitGroup;

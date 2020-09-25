@@ -21,7 +21,7 @@ default = ["std"]
 
 # Enable to use APIs that require `std`.
 # This is enabled by default.
-std = ["lazy_static"]
+std = []
 
 # Enable to use of unstable functionality.
 # This is disabled by default and requires recent nightly compiler.
